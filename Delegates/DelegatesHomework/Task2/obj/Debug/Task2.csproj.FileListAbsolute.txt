@@ -1,0 +1,7 @@
+D:\projects\Mentorship2021\Delegates\DelegatesHomework\Task2\bin\Debug\Task2.exe.config
+D:\projects\Mentorship2021\Delegates\DelegatesHomework\Task2\bin\Debug\Task2.exe
+D:\projects\Mentorship2021\Delegates\DelegatesHomework\Task2\bin\Debug\Task2.pdb
+D:\projects\Mentorship2021\Delegates\DelegatesHomework\Task2\obj\Debug\Task2.csproj.AssemblyReference.cache
+D:\projects\Mentorship2021\Delegates\DelegatesHomework\Task2\obj\Debug\Task2.csproj.CoreCompileInputs.cache
+D:\projects\Mentorship2021\Delegates\DelegatesHomework\Task2\obj\Debug\Task2.exe
+D:\projects\Mentorship2021\Delegates\DelegatesHomework\Task2\obj\Debug\Task2.pdb
