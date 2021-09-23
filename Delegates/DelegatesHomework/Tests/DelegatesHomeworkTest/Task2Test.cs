@@ -21,7 +21,7 @@ namespace DelegatesHomeworkTest
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
-        public void CountCharactersTestInvalid()
+        public void CountCharactersTestValidNoChar()
         {
             //--Arrange
             char c = 'w';
