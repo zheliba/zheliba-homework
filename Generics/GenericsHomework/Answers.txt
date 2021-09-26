@@ -1,0 +1,49 @@
+1. Что такое “Универсальный тип”?
+это элемент кода, способный адаптироваться для выполнения общих действий над различными типами данных
+
+2. Как создать универсальный (параметризованный) класс? Пример.
+class GenericClass<T>
+    {
+        public T Field { get; set; }
+    }
+
+3. Как создать экземпляр параметризованного класса? Пример.
+GenericClass<int> instance1 = new GenericClass<int>();
+
+4. Чем экземпляр класса отличается от объекта? 
+Экземпляр содержит в себе элементы присущи отдельным сущностям, такие как поля. Объект понимает под собой общую составляющую для всех сущностей, - методы, свойства, статические поля.
+
+5.Можно ли класс параметризировать несколькими типами? Пример.
+class GenericClass<T, K>
+    {
+        public T Field { get; set; }
+        void ReturnType(K k)
+        {
+            Console.WriteLine(k.GetType());
+        }
+    }
+
+6. Как создать экземпляр параметризованного класса несколькими типами? Пример.
+GenericClass<int, string> instance1 = new GenericClass<int,string>();
+
+7. Можно ли создавать обобщенные методы? Пример.
+void ReturnType(K k)
+        {
+            Console.WriteLine(k.GetType());
+        }
+instance1.ReturnType("Biba");
+
+8. Как вызвать такой метод? Пример. 2 способа
+instance1.ReturnType<string>("Biba");
+
+9. Можно ли создать обобщенный делегат? Пример.
+delegate R MyDelegate<T, R>(T t);
+
+public string WriteLetter (string name)
+        {
+            return $"Hello, {name}";
+        }
+
+GenericClass<int, string> instance1 = new GenericClass<int,string>();
+            MyDelegate<string, string> myDelegate = new MyDelegate<string, string>(instance1.WriteLetter);
+            Console.WriteLine(myDelegate("Peter"));
