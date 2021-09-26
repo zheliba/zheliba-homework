@@ -1,7 +1,0 @@
-D:\projects\Mentorship2021\Delegates\DelegatesHomework\Task4\bin\Debug\Task4.exe.config
-D:\projects\Mentorship2021\Delegates\DelegatesHomework\Task4\bin\Debug\Task4.exe
-D:\projects\Mentorship2021\Delegates\DelegatesHomework\Task4\bin\Debug\Task4.pdb
-D:\projects\Mentorship2021\Delegates\DelegatesHomework\Task4\obj\Debug\Task4.csproj.AssemblyReference.cache
-D:\projects\Mentorship2021\Delegates\DelegatesHomework\Task4\obj\Debug\Task4.csproj.CoreCompileInputs.cache
-D:\projects\Mentorship2021\Delegates\DelegatesHomework\Task4\obj\Debug\Task4.exe
-D:\projects\Mentorship2021\Delegates\DelegatesHomework\Task4\obj\Debug\Task4.pdb
