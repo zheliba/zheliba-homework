@@ -1,4 +1,6 @@
-﻿namespace Strings.BL
+﻿using System.Globalization;
+
+namespace Strings.BL
 {
     public class User
     {
@@ -8,7 +10,7 @@
         public string? Birthday { get; set; }
         public string RegistrationDate { get; set; }
         public string PhoneNumber { get; set; }
-        public string? Culture { get; set; }
+        public CultureInfo? Culture { get; set; }
 
         
     }
