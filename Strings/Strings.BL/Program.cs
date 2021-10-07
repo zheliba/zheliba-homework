@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Globalization;
 using System.IO;
 using Newtonsoft.Json;
+using Strings.Common;
+
 
 namespace Strings.BL
 {
@@ -8,7 +11,9 @@ namespace Strings.BL
     {
         static void Main()
         {
-            string path = @"D:\projects\Mentorship2021\Strings\Data.json";
+            string pathToUsers = @"..\Data.json";
+            string pathToAccounts = @"..\Accounts.json";
+
 
             var user1 = new User()
             {
@@ -17,7 +22,7 @@ namespace Strings.BL
                 Birthday = "694216800",
                 RegistrationDate = "1633507337",
                 PhoneNumber = "0993238462",
-                Culture = new System.Globalization.CultureInfo("en-US", false)
+                Culture = "en-US"
             };
             var user2 = new User()
             {
@@ -26,25 +31,17 @@ namespace Strings.BL
                 Birthday = "970840052",
                 RegistrationDate = "1572788922",
                 PhoneNumber = "0973223462",
-                Culture = new System.Globalization.CultureInfo("uk-UA", false)
+                Culture = "uk-UA"
             };
 
-            //using (StreamWriter userData = new(path, true))
+            //using (StreamWriter userData = new(pathToUsers, true))
             //{
             //    userData.WriteLine(JsonConvert.SerializeObject(user1));
             //    userData.WriteLine(JsonConvert.SerializeObject(user2));
             //}
 
-            Converter converter = new Converter();
-            converter.GetInfoToConvert(user1);
-            user1 = converter.ConvertToLocal(converter.Culture, user1);
-            Console.WriteLine(user1.Birthday);
-            Console.WriteLine(user1.Culture);
 
-            converter.GetInfoToConvert(user2);
-            user2 = converter.ConvertToLocal(converter.Culture, user2);
-            Console.WriteLine(user2.Birthday);
-            Console.WriteLine(user2.Culture);
+            Console.WriteLine(user1.Birthday.UnixToDateTimeConvert(user1.Culture));
             Console.ReadKey();
         }
     }
