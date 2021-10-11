@@ -11,37 +11,37 @@ namespace Strings.BL
     {
         static void Main()
         {
-            string pathToUsers = @"..\Data.json";
-            string pathToAccounts = @"..\Accounts.json";
-
 
             var user1 = new User()
             {
-                UserId = 1,
                 Name = "Vasya",
                 Birthday = "694216800",
                 RegistrationDate = "1633507337",
                 PhoneNumber = "0993238462",
-                Culture = "en-US"
+                Culture = "en-US",
+                Sum = 1000.01m
             };
             var user2 = new User()
             {
-                UserId = 2,
                 Name = "Lyoha",
                 Birthday = "970840052",
                 RegistrationDate = "1572788922",
                 PhoneNumber = "0973223462",
-                Culture = "uk-UA"
+                Culture = "uk-UA",
+                Sum = 2000.14m
             };
 
-            //using (StreamWriter userData = new(pathToUsers, true))
-            //{
-            //    userData.WriteLine(JsonConvert.SerializeObject(user1));
-            //    userData.WriteLine(JsonConvert.SerializeObject(user2));
-            //}
+            var userRepository = new ListRepository<User>();
+            //userRepository.Add(user1);
+            //userRepository.Add(user2);
+            //Console.WriteLine(userRepository.GetById(2).Culture);
 
-
-            Console.WriteLine(user1.Birthday.UnixToDateTimeConvert(user1.Culture));
+            var temp = userRepository.GetAll();
+            foreach (var item in temp)
+            {
+                Console.WriteLine(item.Name);
+            }
+ 
             Console.ReadKey();
         }
     }

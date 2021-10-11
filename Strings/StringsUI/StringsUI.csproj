@@ -3,7 +3,13 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net5.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Strings.BL\Strings.BL.csproj" />
+    <ProjectReference Include="..\Strings.Common\Strings.Common.csproj" />
+  </ItemGroup>
 
 </Project>

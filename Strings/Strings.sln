@@ -10,12 +10,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Strings.BL", "Strings.BL\St
 		{DEB947BC-EB29-45B0-820B-FB1590D9573D} = {DEB947BC-EB29-45B0-820B-FB1590D9573D}
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{9FDBAA53-8106-4FCD-BDD1-2867EEFCEFB1}"
-	ProjectSection(SolutionItems) = preProject
-		Data.json = Data.json
-	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strings.Common", "Strings.Common\Strings.Common.csproj", "{DEB947BC-EB29-45B0-820B-FB1590D9573D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Strings.Common", "Strings.Common\Strings.Common.csproj", "{DEB947BC-EB29-45B0-820B-FB1590D9573D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

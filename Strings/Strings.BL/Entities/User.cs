@@ -2,16 +2,15 @@
 
 namespace Strings.BL
 {
-    public class User
+    public class User : EntityBase
     {
 
-        public int UserId { get; set; }
         public string Name { get; set; }
-        public string? Birthday { get; set; }
+        public string Birthday { get; set; }
         public string RegistrationDate { get; set; }
         public string PhoneNumber { get; set; }
-        public string Culture { get; set; } 
+        public string Culture { get; set; }
+        public decimal Sum { get; set; }
 
-        
     }
 }

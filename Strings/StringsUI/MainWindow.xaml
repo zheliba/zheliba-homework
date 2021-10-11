@@ -7,8 +7,21 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TextBox HorizontalAlignment="Left" Height="328" Margin="47,64,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="667"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="77,10,0,0" VerticalAlignment="Top" Width="136" Height="44"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="AddMoney" Content="Add money" HorizontalAlignment="Left" Margin="475,303,0,0" VerticalAlignment="Top" Width="136" Height="44" Click="Button_Click"/>
+        <ListBox Name="UsersList" Margin="0,59,553,0" SelectionChanged="ListBox_SelectionChanged" SelectionMode="Single">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Name}"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <TextBox x:Name="userInfo" HorizontalAlignment="Left" Margin="381,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="324" Height="99"/>
+        <TextBox x:Name="AmountToAdd" HorizontalAlignment="Left" Margin="483,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </Window>

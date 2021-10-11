@@ -18,5 +18,15 @@ namespace Strings.Common
             return result;
         }
         
+        public static string ShowSumInCulture(this decimal sum, string format)
+        {
+            if (format == null)
+            {
+                format = "en-US";
+            }
+            IFormatProvider formatProvider = CultureInfo.CreateSpecificCulture(format);
+            var result = sum.ToString(formatProvider);
+            return result;
+        }
     }
 }
