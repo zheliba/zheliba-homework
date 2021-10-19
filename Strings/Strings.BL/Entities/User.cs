@@ -1,6 +1,4 @@
-﻿using System.Globalization;
-
-namespace Strings.BL
+﻿namespace Strings.BL
 {
     public class User : EntityBase
     {

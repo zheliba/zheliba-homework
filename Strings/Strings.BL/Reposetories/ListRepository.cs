@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+
 namespace Strings.BL
 {
     public class ListRepository<T> : IRepository<T> where T : IEntity
@@ -15,6 +16,12 @@ namespace Strings.BL
             string json = r.ReadToEnd();
             _items = JsonConvert.DeserializeObject<List<T>>(json);
             return _items;
+        }
+
+        public void Save()
+        {
+            using StreamWriter itemData = new(pathToItems, false);          
+            itemData.WriteLine(JsonConvert.SerializeObject(_items, Formatting.Indented));          
         }
 
         public T GetById(int id)

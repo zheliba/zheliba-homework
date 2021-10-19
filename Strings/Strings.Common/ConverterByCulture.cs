@@ -3,9 +3,9 @@ using System.Globalization;
 
 namespace Strings.Common
 {
-    public static class StringHandler
+    public static class ConverterByCulture
     {
-        public static string UnixToDateTimeConvert(this string unixTime, string format)
+        public static string UnixToUsualConvert(this string unixTime, string format)
         {
             if (format == null)
             {
@@ -18,7 +18,7 @@ namespace Strings.Common
             return result;
         }
         
-        public static string ShowSumInCulture(this decimal sum, string format)
+        public static string ToLocalizedString(this decimal sum, string format)
         {
             if (format == null)
             {
