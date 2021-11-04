@@ -10,7 +10,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="AddMoney" Content="Add money" HorizontalAlignment="Left" Margin="559,201,0,0" VerticalAlignment="Top" Width="118" Height="44" Click="Button_Click" Visibility="Hidden"/>
+        <Button x:Name="AddMoney" Content="Add money" HorizontalAlignment="Left" Margin="559,201,0,0" VerticalAlignment="Top" Width="118" Height="44" Click="AddMoneyButton_Click" Visibility="Hidden"/>
         <ListBox Name="UsersList" Margin="0,59,553,0" SelectionChanged="ListBox_SelectionChanged" SelectionMode="Single">
             <ListBox.ItemTemplate>
                 <DataTemplate>

@@ -6,8 +6,8 @@ namespace Strings.BL
     {
         IEnumerable<T> GetAll();
         void Save();
-        void Add(T item);
-        T GetById(int id);
-        void Remove(T item);
+        //void Add(T item);
+        //T GetById(int id);
+        //void Remove(T item);
     }
 }

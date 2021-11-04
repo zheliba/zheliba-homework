@@ -24,27 +24,27 @@ namespace Strings.BL
             itemData.WriteLine(JsonConvert.SerializeObject(_items, Formatting.Indented));          
         }
 
-        public T GetById(int id)
-        {
-            return _items.Single(item => item.Id == id);
-        }
+        //public T GetById(int id)
+        //{
+        //    return _items.Single(item => item.Id == id);
+        //}
 
-        public void Add(T item)
-        {
+        //public void Add(T item)
+        //{
             
-            item.Id = _items.Any() ?
-                _items.Max(item => item.Id) + 1
-                : 1;
+        //    item.Id = _items.Any() ?
+        //        _items.Max(item => item.Id) + 1
+        //        : 1;
 
-            _items.Add(item);
-            using StreamWriter itemData = new(pathToItems, true);
-            itemData.WriteLine(JsonConvert.SerializeObject(item));
-        }
+        //    _items.Add(item);
+        //    using StreamWriter itemData = new(pathToItems, true);
+        //    itemData.WriteLine(JsonConvert.SerializeObject(item));
+        //}
 
-        public void Remove(T item)
-        {
-            _items.Remove(item);
-        }
+        //public void Remove(T item)
+        //{
+        //    _items.Remove(item);
+        //}
 
 
     }
